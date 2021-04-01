@@ -1,0 +1,733 @@
+@font-face {
+    font-family: 'Miller';
+    src: url('../fonts/MullerRegular.woff2') format('woff2'),
+    url('../fonts/MullerRegular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Miller';
+    src: url('../fonts/MullerMedium.woff2') format('woff2'),
+    url('../fonts/MullerMedium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Miller';
+    src: url('../fonts/MullerLight.woff2') format('woff2'),
+    url('../fonts/MullerLight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Miller';
+    src: url('../fonts/MullerBold.woff2') format('woff2'),
+    url('../fonts/MullerBold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --color-grey: #f1f1f1;
+    --color-white: #fff;
+    --color-orange: #cc9933;
+    --color-general: #333;
+    --color-text: #999;
+    --color-yellow: #e9ce93;
+    --color-stargrey: #e6e6e6;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Miller', 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--color-general);
+    background-color: var(--color-grey);
+}
+
+a {
+    text-decoration: none;
+    opacity: 1;
+    transition: opacity, ease-out .2s;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+img {
+    max-width: 100%;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+.container {
+    max-width: 1170px;
+}
+
+.section-title {
+    font-size: 40px;
+    line-height: 1px;
+}
+
+.section-description {
+    font-size: 16px;
+    line-height: 32px;
+}
+
+.btn {
+    height: 70px;
+    padding: 0 30px;
+    font-size: 16px;
+    line-height: 1;
+    text-align: center;
+    color: white;
+    background-color: var(--color-orange);
+    border: 1px solid var(--color-orange);
+    border-radius: 12px;
+    cursor: pointer;
+    user-select: none;
+    transition: all .15s ease-in-out
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+/*HEADER*/
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    height: 190px;
+    width: 100%;
+}
+
+.header-top {
+    display: flex;
+    margin-bottom: 30px;
+    margin-top: auto;
+}
+
+.header-logo {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.header-tel {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 20px;
+    margin-right: auto;
+    font-size: 22px;
+    line-height: 32px;
+    color: #666666;
+}
+
+.header-profile {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 10px;
+    color: var(--color-orange);
+}
+
+.header-row {
+    display: flex;
+    height: 70px;
+    border: 1px solid var(--color-white);
+    border-radius: 12px;
+    background-color:var(--color-white);
+}
+
+.header-list {
+    display: flex;
+    padding-left: 20px;
+    height: 100%;
+    margin: 0;
+}
+
+.header-list-item:not(:last-child) {
+    margin-right: 40px;
+}
+
+.header-list-item {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 10px;
+}
+
+.header-link {
+    color: var(--color-general);
+}
+
+.form-container {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 20px;
+    margin-left: auto;
+    width: 350px;
+
+}
+
+.second-title {
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.form-search {
+  display: flex;
+  position: relative;
+}
+
+.input-search {
+    width: 100%;
+    height: 50px;
+    padding-left: 15px;
+    border: 1px solid var(--color-grey);
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    background-color: var(--color-grey);
+}
+
+.btn-search {
+    background: url('../img/search.png') no-repeat;
+    background-size: auto;
+    border: 1px solid var(--color-grey);
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    width: 15%;
+    height: 50px;
+    background-color: var(--color-grey);
+    background-position: center;
+}
+
+
+/*CLIENT*/
+.client-section {
+    display: flex;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.client-section-column{
+  display: flex;
+}
+
+/*BOOKING*/
+.booking-title {
+    margin-left: 40px;
+
+}
+
+.input::placeholder {
+    color: #a7a7a7;
+}
+
+
+.booking-form {
+    margin-top: 20px;
+    color: var(--color-text);
+    height: 70px;
+    width: 500px;
+    border: 1px solid var(--color-white);
+    border-radius: 12px;
+    background-color: var(--color-white);
+    padding-left: 20px;
+}
+
+.booking-form-one {
+    margin-top: 0;
+}
+
+.find {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.booking-btn {
+    width: 160px;
+    padding: 20px;
+}
+
+.colortext {
+    color: #d4ad69;
+    margin-left: 30px;
+}
+
+.booking-description {
+    color: var(--color-text);
+}
+
+
+/*OFFER*/
+.offer-container {
+    margin-left: 40px;
+
+}
+
+.offer-banner {
+    height: 540px;
+    background: url('../img/general.jpg') no-repeat;
+    border-radius: 12px;
+    background-size: cover;
+    display: flex;
+    position: relative;
+    padding-left: 40px;
+}
+
+.offer-title {
+    margin-left: 40px;
+}
+
+.special-title {
+    max-width: 50%;
+    align-self: flex-end;
+    font-size: 66px;
+    line-height: 0.9;
+    font-weight: 500;
+    color: var(--color-white);
+    margin: 0;
+    height: 50%;
+}
+
+.price {
+ display: flex;
+ position: absolute;
+ bottom: 0;
+ line-height: 102px;
+}
+
+.offer-description {
+    font-size: 35px;
+    color: #a5a4a3;
+    margin: 0;
+    line-height: 102px;
+}
+
+.detail-link {
+    color: #dfb35a;
+    margin-left: 60px;
+}
+
+
+/*US*/
+.us-ccontainer {
+    height: 210px;
+}
+
+.us-title {
+    margin-left: 40px;
+}
+
+.us-description {
+   margin-left: 40px;
+   max-width: 85%;
+}
+
+
+/*SERVICES*/
+.services-container {
+    padding-top: 90px;
+    padding-bottom: 60px;
+}
+
+.services-title {
+    margin-left: 40px;
+    margin-bottom: 30px;
+}
+
+.section-services-column {
+  display: flex;
+}
+
+.services-card {
+    padding-left: 40px;
+}
+
+.services-item {
+    margin-bottom: 30px;
+    border: 1px solid var(--color-white);
+    border-radius: 12px;
+    overflow: hidden;
+    background-color:var(--color-white);
+}
+
+.services-link {
+    color: var(--color-orange);
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.servis-list-description {
+    width: 80%;
+    padding-bottom: 40px;
+}
+
+
+/*BENEFIT*/
+.benefit-container {
+    height: 640px;
+    margin-bottom: 70px;
+    margin-top: 60px;
+}
+
+.benefit-title {
+    padding-left: 40px;
+    padding-bottom: 15px;
+}
+
+.section-benefit-column {
+  display: flex;
+}
+
+.benefit-item {
+    margin-bottom: 20px;
+    border: 1px solid var(--color-white);
+    border-radius: 12px;
+    background-color: var(--color-white);
+}
+
+.benefim-img {
+    padding-top: 40px;
+    padding-left: 40px;
+    padding-bottom: 15px;
+}
+
+.benefit-description {
+    padding-left: 40px;
+    padding-right: 40px;
+    line-height: 1.5;
+}
+
+
+/*ACCOMMODATION*/
+.accommodation-container {
+  margin-bottom: 70px;
+  padding-top: 70px;
+  height: 1450px;
+}
+
+.accommodation-title {
+    padding-left: 40px;
+    padding-bottom: 25px;
+}
+
+.section-accommodation-column {
+  display: flex;
+}
+
+.accommodation-item {
+    margin-bottom: 20px;
+    border: 1px solid var(--color-white);
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: var(--color-white);
+}
+
+.accommodation-card {
+    padding-left: 40px;
+}
+
+.price-rating {
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.stars {
+    padding-left: 60px;
+    color: var(--color-yellow);
+}
+
+.star-grey {
+    color: var(--color-stargrey);
+}
+
+.accommodation-name {
+    padding-bottom: 10px;
+}
+
+.accommodation-location,
+.price-from {
+    color: var(--color-text);
+    font-weight: 400;
+}
+
+.price-wow {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.btn-accommodation {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    width: 100px;
+    height: 40px;
+    color: var(--color-orange);
+    background-color: var(--color-white);
+    padding: 0;
+}
+
+.item-all {
+    display: flex;
+    padding-left: 40px;
+    background: url('../img/see\ all.jpg') no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+}
+
+.all-font {
+    height: 20%;
+    align-self: flex-end;
+    text-align: center;
+    font-size: 22px;
+    color: var(--color-white);
+}
+
+.all-font::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+
+/*FEEDBACK*/
+.feedback {
+    padding-bottom: 20px;
+}
+
+
+/*CONTACTS*/
+.contacts-title {
+    margin-left: 40px;
+    padding-top: 70px;
+}
+
+.contacts-list {
+    border: 1px solid var(--color-white);
+    border-radius: 12px;
+    background-color: var(--color-white);
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 45px;
+    padding-bottom: 45px;
+}
+
+.contacts-item {
+    display: flex;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #cccccc;
+}
+
+.contacts-title-item {
+    font-size: 22px;
+    line-height: 32px;
+    color: #666666;
+}
+
+.contacts-description {
+    font-size: 16px;
+    line-height: 24px;
+    padding-left: 80px;
+}
+
+.tels {
+    display: flex;
+    flex-flow: column wrap;
+    padding-left: 35px;
+    padding-top: 30px;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.color-link {
+    color:var(--color-orange);
+}
+
+.email {
+    display: flex;
+    flex-flow: column wrap;
+    padding-left: 80px;
+    padding-top: 30px;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.email-description {
+    color: #b1b1b1;
+}
+
+.time {
+    padding-left: 70px;
+    padding-top: 10px;
+}
+
+.btn-contacts {
+    border: 1px solid var(--color-orange);
+    border-radius: 12px;
+    background-color: var(--color-white);
+    color: var(--color-orange);
+    margin-top: 40px;
+    width: 210px;
+    height: 70px;
+    font-size: 16px;
+    padding: 20px;
+}
+
+
+/*FORM*/
+.section-form {
+  display: flex;
+}
+
+.section-form-container {
+    margin:auto;
+    width: 350px;
+}
+
+.form-title {
+    font-size: 40px;
+    padding-left: 30px;
+}
+
+.input {
+    width: 340px;
+    margin-bottom: 20px;
+    color: var(--color-text);
+    padding-top: 25px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    border: 1px solid var(--color-white);
+    border-radius: 12px;
+}
+
+.textarea {
+    width: 340px;
+    border: 1px solid var(--color-white);
+    border-radius: 12px;
+    padding-top: 15px;
+    padding-bottom: 80px;
+    padding-left: 20px;
+    color: var(--color-text);
+    font-size: 16px;
+}
+
+.btn-submit {
+    margin-top: 20px;
+    width: 340px;
+    height: 70px;
+}
+
+
+/*FOOTER*/
+.footer-container {
+    padding: 50px;
+    margin-bottom: 50px;
+    border: 1px solid var(--color-general);
+    border-radius: 12px;
+    background-image: url(../img/Logo2.png);
+    background-repeat: no-repeat;
+    background-position: 85% 100%;
+    background-color:  var(--color-general);
+    font-size: 16px;
+    line-height: 32px;
+}
+
+.footer-left {
+    color: var(--color-white);
+}
+
+.info {
+    padding-top: 40px;
+    max-width: 70%;
+}
+
+.privacy {
+    padding-top: 40px;
+    color: var(--color-orange);
+}
+
+.footer-adress {
+    margin-top: 0;
+    color: var(--color-white);
+}
+
+.footer-tels {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.footer-email {
+    padding-top: 20px;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.social-list {
+  margin: 0;
+}
+
+.social-item {
+    border: 1px solid var(--color-text);
+    border-radius: 50%;
+    text-align: center;
+    background-color: var(--color-text);
+    height: 27px;
+    width: 27px;
+    margin-bottom: 20px;
+}
+
+.social-item a {
+    color: var(--color-general);
+}
+
+.fa-detail:before {
+    position: relative;
+    top: 3px;
+    left: 5px;
+    font-size: 25px;
+}
+
+.fa-detail-services:before {
+    position: relative;
+    top: 3px;
+    left: 30px;
+    font-size: 25px;
+}
+
+.fa-detail-accommodation:before {
+    position: relative;
+    top: 3px;
+    left: 10px;
+    font-size: 30px;
+}
+
+.writing-form {
+    font-size: 16px;
+
+}
